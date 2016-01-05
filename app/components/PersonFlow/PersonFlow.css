@@ -1,7 +1,0 @@
-@media (min-width: 1000px){
-    .personFlow-container{
-        width: 960px;
-        margin-left: calc(50% - 480px);
-        margin-top: 40px;
-    }
-}

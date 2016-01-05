@@ -3,18 +3,8 @@
  */
 var c = [
     {
-        text: '主页',
-        href: '/#/personFlow'
-    },
-    {
-        text: '流',
-        href: '/#/personFlow'
+        text: '任务',
+        href: '/#/main'
     }
 ];
-if(__DEV__){
-    c.push({
-        text: '问卷模板',
-        href: '/#/form'
-    })
-}
 export default c;
