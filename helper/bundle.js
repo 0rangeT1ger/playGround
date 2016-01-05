@@ -25,7 +25,7 @@ module.exports = function (config, options, host, port) {
 
   options = merge(defaultOptions, options || {});
   host = host || 'localhost';
-  port = port || 3001;
+  port = port || 3000;
 
   var webpackDevServer = new WebpackDevServer(webpack(config), options);
 

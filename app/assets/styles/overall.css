@@ -1,4 +1,7 @@
 #container{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin-top: 50px;
 }
 .navbar-nav li a{
@@ -15,6 +18,12 @@
     .site-wrapper-960{
         width: 960px;
         margin-left: calc(50% - 480px);
-        margin-top: 40px;
+        margin-top: 50px;
+    }
+}
+@media (max-width: 999px){
+    .site-wrapper-960{
+        width: 100%;
+        margin-top: 50px;
     }
 }

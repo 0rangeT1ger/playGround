@@ -3,8 +3,12 @@
  */
 var c = [
     {
-        text: '任务',
+        text: '任务猎手',
         href: '/#/main'
+    },
+    {
+        text: '添加任务',
+        href: '/#/add-todo'
     }
 ];
 export default c;

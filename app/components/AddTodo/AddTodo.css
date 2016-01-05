@@ -1,0 +1,90 @@
+@media (min-width: 1000px) {
+    @keyframes fade-in {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .addTodo-container{
+        height: 100%;
+        width: 100%;
+    }
+    .input-container-modified{
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+
+        margin-top: 10vh;
+        margin-left: calc(50% - 330px);
+    }
+    .input-container{
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+
+        margin-top: 10vh;
+        margin-left: calc(50% - 250px);
+    }
+    .addTodo-title{
+        margin-top: 30vh;
+    }
+    .addTodo-submit-container{
+        display: inline-block;
+        margin-left: 20px;
+        -webkit-animation: fade-in .3s ease;
+        -o-animation: fade-in .3s ease;
+        animation: fade-in .3s ease;
+    }
+}
+@media (max-width: 999px){
+    @keyframes fade-in {
+        from{
+            opacity: 0;
+        }
+        to{
+            opacity: 1;
+        }
+    }
+
+    .addTodo-container{
+        height: 100%;
+        width: 100%;
+    }
+    .input-container-modified{
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+
+        margin-top: 10vh;
+        margin-left: calc(50% - 330px);
+    }
+    .input-container{
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        -ms-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s;
+
+        margin-top: 10vh;
+        margin-left: calc(50% - 250px);
+    }
+    .addTodo-title{
+        margin-top: 30vh;
+    }
+    .addTodo-submit-container{
+        display: inline-block;
+        margin-left: 20px;
+        -webkit-animation: fade-in .3s ease;
+        -o-animation: fade-in .3s ease;
+        animation: fade-in .3s ease;
+    }
+}
