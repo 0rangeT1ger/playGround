@@ -1,0 +1,152 @@
+@media (min-width: 1000px){
+    .person-page-wrapper{
+        width: 960px;
+        margin-left: calc(50% - 480px);
+        margin-top: 40px;
+        min-height: calc(100vh - 50px);
+        position: relative;
+    }
+}
+.person-page-wrapper .background-image-container{
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+}
+.background-image-container.rendered{
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+    background-size: cover !important;
+    background-position: center !important;
+}
+.person-page-wrapper .rendering{
+    background-color: #eeeeee;
+}
+.person-page-wrapper .rendering-dark{
+    background-color: #dddddd;
+}
+.person-page-wrapper .info-col, .person-page-wrapper .detail-col{
+    min-height: 240px;
+    font-size: 23px;
+}
+.detail-col .info, .detail-col .info-big{
+    height: 50px;
+    line-height: 30px;
+    font-size: 23px;
+    padding: 10px;
+    border-radius: 7px;
+    width: calc(100% - 40px);
+    margin: 20px;
+}
+.bottom-border{
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 20px;
+}
+.detail-col{
+    padding-top: 50px;
+}
+.detail-col .info-big{
+    min-height: 40px;
+    height: auto !important;
+    font-size: 43px;
+    line-height: 50px;
+}
+.detail-col p{
+    margin-left: 30px;
+}
+.background-image-container.rendered{
+    background-size: cover;
+    filter: blur(2px);
+    background-position: center;
+}
+.avatar-container{
+    width: 200px;
+    overflow: hidden;
+    height: 200px;
+    border-radius: 100px;
+    margin: -110px auto 0 auto;
+}
+.avatar-container .avatar{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+.info-col .name-container{
+    width: calc(100% - 40px);
+    text-align: center;
+    margin: 20px;
+    margin-top: 40px;
+    height: 50px;
+    font-size: 35px;
+    border-radius: 7px;
+}
+.info-col .sex-intension-container{
+    text-align: center;
+    width: calc(100% - 40px);
+    margin: 20px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 7px;
+}
+@keyframes jelly {
+    0%{
+        transform: scale(1);
+    }
+    70%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.pointer{
+    cursor: pointer;
+    -webkit-animation: jelly .2s ease;
+    -o-animation: jelly .2s ease;
+    animation: jelly .2s ease;
+    font-size: 30px !important;
+}
+.person-page-wrapper .tags-container{
+    width: 100%;
+    min-height: 200px;
+    margin-top: 20px;
+}
+.tags-container .tag{
+    height: 40px;
+    float: left;
+    min-width: 120px;
+    background-color: #aaaaaa;
+    -webkit-transition: background-color .3s;
+    -moz-transition: background-color .3s;
+    -ms-transition: background-color .3s;
+    -o-transition: background-color .3s;
+    transition: background-color .3s;
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-size: 24px;
+    line-height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, .8);
+
+}
+.tag.clicked{
+    background-color: #2BB8AA;
+}
+.liked-times{
+    font-size: 30px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.tag .totalNumber{
+    margin-left: 30px;
+    font-size: 20px;
+}
+.input-tab{
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}

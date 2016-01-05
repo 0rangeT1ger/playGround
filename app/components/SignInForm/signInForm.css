@@ -1,0 +1,6 @@
+.form-page-stage{
+    perspective: 450px;
+    perspective-origin: 50% 50%;
+    min-height: calc(100vh - 50px);
+    overflow: hidden;
+}
