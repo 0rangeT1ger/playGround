@@ -15,8 +15,8 @@ const AppRouter = React.createClass({
         return (
             <Router history={history}>
                 <Redirect from='/' to='/main' />
-                <Route path='/main' component={Main}> </Route>
-                <Route path="/add-todo" component={AddTodo}> </Route>
+                <Route path='/main/:userName' component={Main}> </Route>
+                <Route path="/add-todo/:userName" component={AddTodo}> </Route>
             </Router>
         )
     }

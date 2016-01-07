@@ -9,8 +9,7 @@ injectTapEventPlugin();
 var App = React.createClass({
     getInitialState (){
         return {
-            isNewbee: false,
-            userName: '用户名',
+            userName: window.location.href.split('/')[window.location.href.split('/').length - 1],
             reportId: 0
         }
     },

@@ -3,7 +3,7 @@
  */
 var c = [
     {
-        text: '任务猎手',
+        text: '任务追踪',
         href: '/#/main'
     },
     {

@@ -28,12 +28,12 @@ var Navbar = React.createClass({
         return itemList.map( (item, index) => {
             if(index == activeIndex){
                 return(
-                    <li className="active"><a onClick={this.clickNavHandler} id={'nav-' + index} href={item.href}>{item.text}</a></li>
+                    <li className="active"><a onClick={this.clickNavHandler} id={'nav-' + index} href={item.href + '/' + this.props.userName}>{item.text}</a></li>
                 )
             }
             else {
                 return(
-                    <li><a onClick={this.clickNavHandler} id={'nav-' + index} href={item.href}>{item.text}</a></li>
+                    <li><a onClick={this.clickNavHandler} id={'nav-' + index} href={item.href + '/' + this.props.userName}>{item.text}</a></li>
                 )
             }
         })
@@ -50,8 +50,7 @@ var Navbar = React.createClass({
                             {this.renderNavItems(this.state.navItems, this.state.activeIndex)}
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a href={this.props.reportId !== 0 ? ('/#/personIndexPage/' + this.props.reportId)
-                                                                   : ('/#/form')}>{this.props.userName}</a></li>
+                            <li><a href="javascript:;">{this.props.userName}</a></li>
                             <li><a href={backEndURL + "/logout"}>登出</a></li>
                         </ul>
                     </div>

@@ -21,6 +21,9 @@ const AddTodo = React.createClass({
             error: false
         }
     },
+    componentDidMount (){
+        console.log('userName:  ', this.props.params.userName);
+    },
     _handleInputChange (ev){
         let inputValue = ev.target.value;
         if(inputValue.length === 0){
@@ -60,13 +63,13 @@ const AddTodo = React.createClass({
     },
 
     submitTodo (){
-        let todos = JSON.parse(window.localStorage.getItem('todos'));
+        let todos = JSON.parse(window.localStorage.getItem('todos' + this.props.params.userName)) || [];
         todos.push(this.state.todo);
         this.setState({
             todo: '',
             dialogOpen: false
         });
-        window.localStorage.setItem('todos', JSON.stringify(todos));
+        window.localStorage.setItem('todos' + this.props.params.userName, JSON.stringify(todos));
         //window.location.reload();
     },
 

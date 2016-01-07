@@ -16,7 +16,7 @@ const _todoItemStyle = {
     lineHeight: '60px',
     textAlign: 'left',
     paddingTop: '15px',
-    marginLeft: '20px',
+    paddingLeft: '20px',
     borderBottom: '1px solid #dddddd'
 };
 const _finishButtonStyle = {
@@ -27,7 +27,7 @@ require('./Main.css');
 const Main = React.createClass({
     getInitialState (){
         return {
-            todos: JSON.parse(window.localStorage.getItem('todos')) || [],
+            todos: JSON.parse(window.localStorage.getItem('todos' + this.props.params.userName)) || [],
             selectedIndexes: []
         }
     },
@@ -55,23 +55,30 @@ const Main = React.createClass({
         }
     },
     displayTodos (list, selectedIndexes){
-        return list.map(
-            (item, index) => {
-                return (
-                    <Checkbox
-                        name="checkboxName1"
-                        label={item}
-                        style={_todoItemStyle}
-                        labelStyle={{
+        if(list.length && list.length !== 0){
+            return list.map(
+                (item, index) => {
+                    return (
+                        <Checkbox
+                            name="checkboxName1"
+                            label={item}
+                            style={_todoItemStyle}
+                            labelStyle={{
                             fontSize: '30px'
                         }}
-                        value={index}
-                        defaultChecked={selectedIndexes.indexOf(index) !== -1}
-                        onCheck={this.checkTodoHandler}
-                    />
-                )
-            }
-        )
+                            value={index}
+                            defaultChecked={selectedIndexes.indexOf(index) !== -1}
+                            onCheck={this.checkTodoHandler}
+                        />
+                    )
+                }
+            )
+        }
+        else {
+            return (
+                <h2 style={{marginTop: 'calc(25%)'}} className="text-center">当前没有未完成任务</h2>
+            )
+        }
     },
     finishTodoHandler (){
         console.log('clicked');
@@ -113,7 +120,7 @@ const Main = React.createClass({
     render: function(){
         return (
             <div className="container-fluid text-center">
-                <h1>你的任务猎手</h1>
+                <h1>追踪任务</h1>
                 <div className="todo-hunter-container">
                     {this.displayTodos(this.state.todos, this.state.selectedIndexes)}
                 </div>
