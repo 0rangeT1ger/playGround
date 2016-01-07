@@ -95,7 +95,7 @@ const Main = React.createClass({
                 }
             }
         );
-        window.localStorage.setItem('todos', JSON.stringify(newTodos));
+        window.localStorage.setItem('todos' + this.props.params.userName, JSON.stringify(newTodos));
         this.setState({
             todos: newTodos,
             selectedIndexes: []
