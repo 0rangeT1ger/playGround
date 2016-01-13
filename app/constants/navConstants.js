@@ -4,11 +4,11 @@
 var c = [
     {
         text: '任务追踪',
-        href: '/#/main'
+        href: 'https://rawgit.com/0rangeT1ger/playGround/todoList/dist/index.html#/main'
     },
     {
         text: '添加任务',
-        href: '/#/add-todo'
+        href: 'https://rawgit.com/0rangeT1ger/playGround/todoList/dist/index.html#/add-todo'
     }
 ];
 export default c;

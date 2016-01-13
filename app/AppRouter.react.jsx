@@ -13,7 +13,7 @@ const history = createHistory({
 const AppRouter = React.createClass({
     render () {
         return (
-            <Router history={history}>
+            <Router hash={false} history={history}>
                 <Redirect from='/' to='/main' />
                 <Route path='/main/:userName' component={Main}> </Route>
                 <Route path="/add-todo/:userName" component={AddTodo}> </Route>
